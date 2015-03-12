@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/ImmobilienScout24/python-cloudwatchlogs-logging.svg?branch=master)](https://travis-ci.org/ImmobilienScout24/python-cloudwatchlogs-logging)
 [![Coverage Status](https://coveralls.io/repos/ImmobilienScout24/python-cloudwatchlogs-logging/badge.svg)](https://coveralls.io/r/ImmobilienScout24/python-cloudwatchlogs-logging)
+[![Codacy Badge](https://www.codacy.com/project/badge/c86ebfb675ba4747bb4b58303285bd4b)](https://www.codacy.com/public/arnehilmann/python-cloudwatchlogs-logging)
 
 **_Currently under construction._**
 
