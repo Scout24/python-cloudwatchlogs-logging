@@ -36,6 +36,7 @@ authors = [Author('Arne Hilmann', 'arne.hilmann@gmail.com')]
 url = 'https://github.com/ImmobilienScout24/python-cloudwatchlogs-logging'
 license = 'Apache License 2.0'
 
+
 @init
 def set_properties(project):
     project.set_property("verbose", True)
