@@ -23,5 +23,5 @@ logger.warn("Tadahhh")
 - [AWS Credentials for Boto](http://docs.pythonboto.org/en/latest/boto_config_tut.html#credentials)
 
 ## Licensing
-Monocyte is licensed under [Apache License, Version 2.0](https://github.com/ImmobilienScout24/python-cloudwatchlogs-logging/blob/master/LICENSE).
+python-cloudwatchlogs-logging is licensed under [Apache License, Version 2.0](https://github.com/ImmobilienScout24/python-cloudwatchlogs-logging/blob/master/LICENSE).
 
