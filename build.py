@@ -36,7 +36,6 @@ authors = [Author('Arne Hilmann', 'arne.hilmann@gmail.com')]
 url = 'https://github.com/ImmobilienScout24/python-cloudwatchlogs-logging'
 license = 'Apache License 2.0'
 
-
 @init
 def set_properties(project):
     project.set_property("verbose", True)
@@ -54,6 +53,8 @@ def set_properties(project):
     project.set_property('copy_resources_target', '$dir_dist')
     project.get_property('copy_resources_glob').append('setup.cfg')
     project.set_property('dir_dist_scripts', 'scripts')
+
+    project.get_property('distutils_commands').append('bdist_egg')
 
     project.set_property('distutils_classifiers', [
         'Development Status :: 2 - Pre-Alpha',
