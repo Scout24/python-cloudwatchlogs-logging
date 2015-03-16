@@ -95,5 +95,9 @@ class CloudWatchLogsHandler(logging.StreamHandler):
 
     def emit(self, record):
         timestamp = int(record.created * 1000)
-        message = json.dumps(vars(record))
+        record_dict = vars(record)
+        for key_to_del in "threadName thread process processName args lineno asctime relativeCreated msecs".split():
+            if key_to_del in record_dict:
+                del record_dict[key_to_del]
+        message = json.dumps(record_dict)
         self.put_message(message, timestamp)
