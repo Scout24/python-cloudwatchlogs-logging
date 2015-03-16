@@ -27,7 +27,7 @@ use_plugin('copy_resources')
 default_task = ['analyze', 'publish']
 
 name = 'python-cloudwatchlogs-logging'
-version = '0.0.2'
+version = '0.0.3'
 summary = 'Handler for easy logging to AWS CloudWatchLogs.'
 description = """
     Handler for easy logging to AWS CloudWatchLogs.
