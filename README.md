@@ -11,11 +11,11 @@ Logging Handler for easy logging to AWS CloudWatchLogs.
 ## Example
 ```
 import logging
-from cloudwatchlogs_logger import CloudWatchLogsHandler
+from cloudwatchlogs_logging import CloudWatchLogsHandler
 
 cwl_handler = CloudWatchLogsHandler(AWS_REGION, GROUP_NAME, STREAM_NAME)
 logger = logging.getLogger(LOGGER_NAME)
-logger.addHandler(cloudwatch_handler)
+logger.addHandler(cwl_handler)
 logger.warn("Tadahhh")
 ```
 
