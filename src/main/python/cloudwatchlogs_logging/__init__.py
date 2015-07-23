@@ -38,11 +38,12 @@ class CloudWatchLogsHandler(logging.StreamHandler):
             http://docs.pythonboto.org/en/latest/getting_started.html#configuring-boto-credentials)
 
     Typical Usage:
-        from cloudwatchlogs_logger import CloudWatchLogsHandler
-        cwl_handler = CloudWatchLogsHandler(AWS_REGION, GROUP_NAME, STREAM_NAME)
+        import logging
+        from cloudwatchlogs_logging import CloudWatchLogsHandler
 
+        cwl_handler = CloudWatchLogsHandler(AWS_REGION, GROUP_NAME, STREAM_NAME)
         logger = logging.getLogger(LOGGER_NAME)
-        logger.addHandler(cloudwatch_handler)
+        logger.addHandler(cwl_handler)
         logger.warn("Tadahhh")
     """
     def __init__(self, region, log_group_name, log_stream_name, level=logging.INFO):
