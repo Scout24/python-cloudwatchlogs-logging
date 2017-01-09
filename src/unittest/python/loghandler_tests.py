@@ -52,6 +52,15 @@ class CloudWatchLogsHandlerTest(unittest.TestCase):
         self.myAssertIn("WARNING", log_event["message"])
         self.myAssertIn("aha", log_event["message"])
 
+    def test_cloudwatch_logging_exception_logging(self):
+        cloudwatch_handler = CloudWatchLogsHandler("foo-region", "foo-group", "test")
+        self.logger.addHandler(cloudwatch_handler)
+
+        try:
+            1 / 0
+        except Exception:
+            self.logger.exception("Cannot divide by zero:")
+
     def test_log_group_already_exists(self):
         e = boto.logs.exceptions.ResourceAlreadyExistsException(400, "binschonda")
         self.connection.create_log_group.side_effect = e

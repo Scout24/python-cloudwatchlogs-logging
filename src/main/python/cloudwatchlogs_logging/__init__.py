@@ -100,5 +100,8 @@ class CloudWatchLogsHandler(logging.StreamHandler):
         for key_to_del in "threadName thread process processName args lineno asctime relativeCreated msecs".split():
             if key_to_del in record_dict:
                 del record_dict[key_to_del]
-        message = json.dumps(record_dict)
+        try:
+            message = json.dumps(record_dict)
+        except Exception:
+            message = json.dumps(str(record_dict))
         self.put_message(message, timestamp)
